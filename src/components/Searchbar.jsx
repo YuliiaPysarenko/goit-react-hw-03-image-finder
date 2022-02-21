@@ -1,6 +1,7 @@
 import "../App.css";
 import { Component } from "react";
 import { nanoid } from "nanoid";
+import PropTypes from "prop-types";
 
 class Searchbar extends Component {
   state = {
@@ -48,6 +49,10 @@ class Searchbar extends Component {
       </header>
     );
   }
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired
 }
 
 export default Searchbar;

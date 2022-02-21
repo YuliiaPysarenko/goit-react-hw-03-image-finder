@@ -2,6 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Oval } from "react-loader-spinner";
+import PropTypes from "prop-types";
 
 import ImageGalleryItem from "./ImageGalleryItem";
 import Button from "./Button";
@@ -132,6 +133,10 @@ class ImageGallery extends Component {
       </>
     );
   }
+}
+
+ImageGallery.propTypes = {
+  request: PropTypes.string.isRequired
 }
 
 export default ImageGallery;

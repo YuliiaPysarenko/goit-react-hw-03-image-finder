@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ImageGalleryItem = ({
   id,
   webformatURL,
@@ -21,5 +23,13 @@ const ImageGalleryItem = ({
     </li>
   );
 };
+
+ImageGalleryItem.propTypes = {
+  id: PropTypes.string,
+  webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+  modalOpen: PropTypes.func.isRequired,
+}
 
 export default ImageGalleryItem;
