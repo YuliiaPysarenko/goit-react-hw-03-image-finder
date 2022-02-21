@@ -34,7 +34,6 @@ class ImageGallery extends Component {
     if (this.props.request !== prevProps.request) {
       this.setState({ page: 1 });
       this.setState({ images: [] });
-      console.log(this.state.images);
       this.getImages();
     } else if (this.state.page !== prevState.page) {
       this.getImages();
